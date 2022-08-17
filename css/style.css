@@ -11,6 +11,10 @@ a{
     transition: .4s;
 }
 
+img{
+    max-width: 100%;
+}
+
 .container{
     max-width: 1230px;
     padding: 0 30px;
@@ -20,6 +24,30 @@ a{
 .title-1 {
     font-weight: 600;
     font-size: 34px;
+}
+
+.btn {
+    /* чтобы кнопка не была строчной а работала как блок но при этом ширина не фиксированная а в зависимости от контента */
+    display: inline-block; 
+    padding: 7px 22px;
+    border-radius:30px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+    background-color:#000;
+
+    transition: background-color 0.3s ease-in, top 0.3s ease-in;
+}
+
+.btn:hover, .btn:focus{
+    background-color: grey;
+    color: #fff;
+}
+
+.btn:active{
+    position: relative;
+    top:1px;
+    background-color: #000;
 }
 
 /*Header*/
@@ -67,6 +95,10 @@ a{
     font-style: 14px;
 }
 
+.nav-button{
+    display: none;
+}
+
 .nav-link {
     color: #000;
 }
@@ -89,13 +121,13 @@ a{
     max-width: 500px;
     margin-top: 124px;
 }
-.header-img {
-}
+
 
 .header-heading{
     font-weight: 600;
     font-size: 44px;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .header-content p{
@@ -111,8 +143,14 @@ a{
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
+    row-gap: 60px;
+    /* Пернос на след ряды */
+    flex-wrap: wrap;
 }
 .service-card {
+/* Жадность карточки к свободному пр-ву - 1, уступать свободное пр-во - 1, карточка базисно занимает ровно столько места сколько им нужно */
+    flex: 1 1 0;
+    min-width: 315px;
 }
 .service-card-img {
     margin-bottom: 30px;
@@ -161,4 +199,42 @@ a{
 .project-title a{
     color:#000;
     text-decoration: underline;
+}
+
+/* Footer */
+
+.contacts {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.contacts-title {
+    margin-bottom: 40px;
+}
+
+.contacts-desc {
+    font-size: 18px;
+    max-width: 480px;
+    margin: 0 auto 40px; 
+    /* сверху 0 слева-справа - auto снизу-40px */
+}
+
+/* Каждый следующий параграф кроме первого будет иметь отступ равный размеру шрифта родителя */
+.contacts-desc p + p{
+    margin-top: 1em;
+}
+
+.contacts-button {
+    margin-bottom: 80px;
+}
+
+.contacts-social {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    column-gap:60px;
+    margin-bottom: 40px;
+}
+.contacts-footer {
+    color: #828282;
 }
