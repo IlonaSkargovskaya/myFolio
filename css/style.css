@@ -142,12 +142,12 @@ img{
     margin-top: 30px;
 }
 
-/* services */
+/* skillss */
 
-.services{
+.skills{
     padding: 90px 0;
 }
-.services-row {
+.skills-row {
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
@@ -155,21 +155,21 @@ img{
     /* Пернос на след ряды */
     flex-wrap: wrap;
 }
-.service-card {
+.skills-card {
 /* Жадность карточки к свободному пр-ву - 1, уступать свободное пр-во - 1, карточка базисно занимает ровно столько места сколько им нужно */
     flex: 1 1 0;
-    min-width: 315px;
+    /* min-width: 315px; */
 }
-.service-card-img {
+.skills-card-img {
     margin-bottom: 30px;
 }
-.service-card-title {
+.skills-card-title {
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
-.service-card-desc {
+.skills-card-desc {
     line-height: 2;
 }
 
