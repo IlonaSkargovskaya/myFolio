@@ -127,11 +127,19 @@ img{
     font-weight: 600;
     font-size: 44px;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1;
+}
+
+.header-heading span{
+    font-size: 28px;
 }
 
 .header-content p{
     line-height: 2;
+}
+
+.header-btn{
+    margin-top: 30px;
 }
 
 /* services */
